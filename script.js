@@ -198,12 +198,12 @@ const cartTemplate = (product) => `
                         </div>
 
                         <div class="form-group">
-                            <input type="text" placeholder="市区町村" class="p-locality input-field" id="Municipality" />
+                            <input type="text" placeholder="市区町村" class="p-locality　p-street-address input-field" id="Municipality" />
                             <p style="font-size: 0.8em; color: #666; text-align: right; margin-top: 5px;">例) 千代田区九段下</p>
                         </div>
 
                         <div class="form-group">
-                            <input type="text" placeholder="番地・建物名・部屋番号" class="p-street-address input-field" id="BlockNumber" />
+                            <input type="text" placeholder="番地・建物名・部屋番号" class="input-field" id="BlockNumber" />
                             <p style="font-size: 0.8em; color: #666; text-align: right; margin-top: 5px;">例) 1丁目1-1 グランド九段下501号室</p>
                         </div>
                         
@@ -336,7 +336,15 @@ openCartButtons.forEach(button => {
         if (cartOverlay) {
             // **【修正箇所】数量変更時の計算のために単価をカスタムデータ属性として保存**
             cartOverlay.setAttribute('data-base-price', product.price);
-            
+
+            //  YubinBango.jsの処理を再実行する
+            // フォームが動的に追加されたため、YubinBangoの機能を再起動する。
+            // 該当フォーム(h-adrを持つ)を起点に検索し、初期化を行う。
+            const addressForm = cartOverlay.querySelector('.h-adr');
+            if (addressForm) {
+                new YubinBango.MicroformatDom(addressForm);
+            }
+                
             cartOverlay.scrollTop = 0;
             document.body.style.overflow = 'hidden';
 
