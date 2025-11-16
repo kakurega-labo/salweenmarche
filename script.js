@@ -145,7 +145,7 @@ const cartTemplate = (product) => `
                         </div>
                         
                         <div class="form-group">
-                            <select class="input-field p-region" id="Prefecture">
+                            <select class="p-region input-field" id="Prefecture">
                                 <option value="">都道府県を選択してください</option>
                                 <option value="北海道">北海道</option>
                                 <option value="青森県">青森県</option>
@@ -198,12 +198,12 @@ const cartTemplate = (product) => `
                         </div>
 
                         <div class="form-group">
-                            <input type="text" placeholder="市区町村" class="input-field p-locality" id="Municipality" />
+                            <input type="text" placeholder="市区町村" class="p-locality input-field" id="Municipality" />
                             <p style="font-size: 0.8em; color: #666; text-align: right; margin-top: 5px;">例) 千代田区九段下</p>
                         </div>
 
                         <div class="form-group">
-                            <input type="text" placeholder="番地・建物名・部屋番号" class="input-field p-street-address" id="BlockNumber" />
+                            <input type="text" placeholder="番地・建物名・部屋番号" class="p-street-address input-field" id="BlockNumber" />
                             <p style="font-size: 0.8em; color: #666; text-align: right; margin-top: 5px;">例) 1丁目1-1 グランド九段下501号室</p>
                         </div>
                         
