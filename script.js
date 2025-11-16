@@ -130,7 +130,7 @@ const cartTemplate = (product) => `
                         </div>
                     </div>
 
-                    <form class="form-section h-adr">
+                    <form class="h-adr form-section">
                         <input type="hidden" class="p-country-name" value="Japan">
                         <h2>お届け先情報</h2>
                         <div class="input-group">
