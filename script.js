@@ -306,7 +306,6 @@ function updateCartTotals() {
 // **配送方法のラジオボタンDOMテンプレートを追加**
 const deliveryOptionsTemplate = () => `
     <div class="form-section">
-        <h2>配送方法</h2>
         <div class="form-group">
             <label class="payment-option">
                 <input type="radio" name="deliveryMethod" value="standard" checked style="margin-right: 15px; transform: scale(1.5);">
