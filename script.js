@@ -223,9 +223,11 @@ const cartTemplate = (product) => `
 
                     <div class="form-section">
                         <h2>配送方法</h2>
+                        <div class="delivery-message">
                         <p style="color: var(--color-accent); font-size: 0.9em;">
                             ※ お届け先が入力されていないため、配送方法を選択できません。お届け先住所を入力してください。
                         </p>
+                       </div>
                     </div>
 
                     <div class="form-section">
