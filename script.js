@@ -303,6 +303,19 @@ function updateCartTotals() {
     totalElement.textContent = `¥${newTotal.toLocaleString()}`;
 }
 
+// **配送方法のラジオボタンDOMテンプレートを追加**
+const deliveryOptionsTemplate = () => `
+    <div class="form-section">
+        <h2>配送方法</h2>
+        <div class="form-group">
+            <label class="payment-option">
+                <input type="radio" name="deliveryMethod" value="standard" checked style="margin-right: 15px; transform: scale(1.5);">
+                <div style="flex-grow: 1;">普通郵便</div>
+                <div>¥0</div>
+            </label>
+            </div>
+    </div>
+`;
 
 const openCartButtons = document.querySelectorAll('.open-cart-btn');
 
@@ -353,6 +366,47 @@ openCartButtons.forEach(button => {
             if (quantitySelect) {
                 quantitySelect.addEventListener('change', updateCartTotals);
             }
+            // **【追加箇所】お届け先情報入力完了を監視し、配送方法を表示するロジック**
+            const addressInputs = cartOverlay.querySelectorAll('.h-adr .input-field');
+            const deliveryMessage = cartOverlay.querySelector('.delivery-message');
+
+            // 住所入力が全て完了しているかチェックする関数
+            function checkAddressCompletion() {
+                let allFilled = true;
+                addressInputs.forEach(input => {
+                    // select-one の場合はデフォルト値以外が選択されているか
+                    if (input.tagName === 'SELECT' && input.value === '') {
+                        allFilled = false;
+                    }
+                    // text, tel, email の場合は値が入っているか
+                    else if (input.tagName === 'INPUT' && input.value.trim() === '') {
+                        allFilled = false;
+                    }
+                });
+
+                if (allFilled) {
+                    // 全て入力されていたら、配送方法のDOMに書き換え
+                    if (deliveryMessage.querySelector('p')) {
+                        deliveryMessage.innerHTML = deliveryOptionsTemplate();
+                    }
+                } else {
+                    // 1つでも空欄になった場合、初期メッセージに戻す
+                    // ただし、既にラジオボタンが表示されている場合のみ元に戻す
+                    if (!deliveryMessage.querySelector('p')) {
+                         deliveryMessage.innerHTML = `
+                         `;
+                    }
+                }
+            }
+
+            // 全ての入力欄にイベントリスナーを設定
+            addressInputs.forEach(input => {
+                input.addEventListener('input', checkAddressCompletion);
+                input.addEventListener('change', checkAddressCompletion); // select用
+            });
+
+            // 最初に一度チェックを実行（YubinBangoで自動入力された場合に対応）
+            checkAddressCompletion();
         }
 
 
