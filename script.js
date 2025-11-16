@@ -395,9 +395,9 @@ openCartButtons.forEach(button => {
                     // ただし、既にラジオボタンが表示されている場合のみ元に戻す
                     if (!deliveryMessage.querySelector('p')) {
                          deliveryMessage.innerHTML = `
-                         <p style="color: var(--color-accent); font-size: 0.9em;">
+                            <p style="color: var(--color-accent); font-size: 0.9em;">
                             ※ お届け先が入力されていないため、配送方法を選択できません。お届け先住所を入力してください。
-                        </p>
+                            </p>
                          `;
                     }
                 }
