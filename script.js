@@ -198,7 +198,7 @@ const cartTemplate = (product) => `
                         </div>
 
                         <div class="form-group">
-                            <input type="text" placeholder="市区町村" class="p-locality　p-street-address input-field" id="Municipality" />
+                            <input type="text" placeholder="市区町村" class="p-locality p-street-address input-field" id="Municipality" />
                             <p style="font-size: 0.8em; color: #666; text-align: right; margin-top: 5px;">例) 千代田区九段下</p>
                         </div>
 
