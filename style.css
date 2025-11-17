@@ -354,6 +354,42 @@
     flex: 1;
 }
 
+.input-label {
+    align-self: flex-start;
+    position: absolute;
+    margin-top: 5px;
+    padding-left: calc(var(--standard-font-size) - 5px);
+    font-size: 0.75em;
+    transition: all 0.2s ease-out;
+    text-overflow: ellipsis;
+    user-select: none;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+    color: #7b7b7b;
+}
+
+.input-label.enter {
+    opacity: 1;
+}
+
+.input-fieldEnter {
+   padding-top: 1.5em;
+   padding-bottom: calc(0.35em - 1px);
+   transition: all 0.2s ease-out;
+}
+
+.input-labelWrapper {
+    display: flex;
+}
+
+.input-labelCheckbox {
+    margin-right: 5px;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+}
+
 /* カート商品リスト */
 .cart-item-list img {
     width: 50px;
