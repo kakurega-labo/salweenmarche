@@ -121,9 +121,16 @@ const cartTemplate = (product) => `
                     <div class="form-section">
                         <h2>メールアドレス</h2>
                         <div class="form-group">
+                          <div>
+                           <div class="input-labelWrapper">
                             <input type="email" placeholder="メールアドレス" class="input-field" />
+                            <label class="input-label">メールアドレス
+                             </label>
+                           </div>
                             <p style="font-size: 0.8em; color: #666; text-align: right; margin-top: 5px;">例) sample@example.com</p>
+                          </div>
                         </div>
+                        
                         <div style="display: flex; align-items: center; font-size: 0.9em; margin-bottom: 30px;">
                             <input class="input-labelCheckbox" type="checkbox" id="shop-info" checked />
                             <label for="shop-info">ショップの情報を受け取る</label>
