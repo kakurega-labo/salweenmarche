@@ -141,14 +141,34 @@ const cartTemplate = (product) => `
                         <input type="hidden" class="p-country-name" value="Japan">
                         <h2>お届け先情報</h2>
                         <div class="input-group">
+                          <div>
+                           <div class="input-labelWrapper">
                             <input type="text" placeholder="お名前 (姓)" class="input-field" />
+                            <label class="input-label">お名前 (姓)
+                             </label>
+                           </div>
+                             <p style="font-size: 0.8em; color: #666; text-align: right; margin-top: 5px;">例) 山田</p>
+                           </div>
+
+                           <div>
+                           <div class="input-labelWrapper">
                             <input type="text" placeholder="お名前 (名)" class="input-field" />
+                            <label class="input-label">お名前 (名)
+                             </label>
+                           </div>
+                             <p style="font-size: 0.8em; color: #666; text-align: right; margin-top: 5px;">例) 太郎</p>
+                           </div>
                         </div>
-                        <p style="font-size: 0.8em; color: #666; text-align: right; margin-top: 5px;">例) 鈴木 太郎</p>
                         
                         <div class="form-group">
+                           <div>
+                           <div class="input-labelWrapper">
                             <input type="text" placeholder="郵便番号" maxlength="7" class="p-postal-code input-field" id="Postalcode" />
+                            <label class="input-label">郵便番号
+                            </label>
+                           </div>
                             <p style="font-size: 0.8em; color: #666; text-align: right; margin-top: 5px;">例) 1066237</p>
+                           </div>
                         </div>
                         
                         <div class="form-group">
@@ -205,18 +225,36 @@ const cartTemplate = (product) => `
                         </div>
 
                         <div class="form-group">
-                            <input type="text" placeholder="市区町村" class="p-locality p-street-address input-field" id="Municipality" />
+                           <div>
+                           <div class="input-labelWrapper">
+                            <input type="text" placeholder="市区町村" class="input-field p-locality p-street-address" id="Municipality" />
+                           <label class="input-label">市区町村
+                             </label>
+                           </div>
                             <p style="font-size: 0.8em; color: #666; text-align: right; margin-top: 5px;">例) 千代田区九段下</p>
-                        </div>
-
-                        <div class="form-group">
-                            <input type="text" placeholder="番地・建物名・部屋番号" class="input-field" id="BlockNumber" />
-                            <p style="font-size: 0.8em; color: #666; text-align: right; margin-top: 5px;">例) 1丁目1-1 グランド九段下501号室</p>
+                           </div>
                         </div>
                         
                         <div class="form-group">
+                           <div>
+                           <div class="input-labelWrapper">
+                            <input type="text" placeholder="番地・建物名・部屋番号" class="input-field" id="BlockNumber" />
+                           <label class="input-label">番地・建物名・部屋番号
+                           </label>
+                           </div>
+                            <p style="font-size: 0.8em; color: #666; text-align: right; margin-top: 5px;">例) 1丁目1-1 グランド九段下501号室</p>
+                           </div>
+                        </div>
+                        
+                        <div class="form-group">
+                           <div>
+                           <div class="input-labelWrapper">
                             <input type="tel" placeholder="電話番号" class="input-field" />
+                           <label class="input-label">電話番号
+                           </label>
+                           </div>
                             <p style="font-size: 0.8em; color: #666; text-align: right; margin-top: 5px;">例) 09012345678</p>
+                           </div>
                         </div>
                     </form>
 
