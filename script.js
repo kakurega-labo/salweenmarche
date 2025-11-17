@@ -125,8 +125,8 @@ const cartTemplate = (product) => `
                             <p style="font-size: 0.8em; color: #666; text-align: right; margin-top: 5px;">例) sample@example.com</p>
                         </div>
                         <div style="display: flex; align-items: center; font-size: 0.9em; margin-bottom: 30px;">
-                            <input type="checkbox" id="shop-info" checked style="margin-right: 5px;" />
-                            <label class="input-labelCheckbox" for="shop-info">ショップの情報を受け取る</label>
+                            <input class="input-labelCheckbox" type="checkbox" id="shop-info" checked />
+                            <label for="shop-info">ショップの情報を受け取る</label>
                         </div>
                     </div>
 
