@@ -216,7 +216,7 @@ const cartTemplate = (product) => `
                     <div class="form-section">
                         <h2>購入者情報</h2>
                         <p style="font-size: 0.9em; margin-bottom: 15px;">お届け先情報と購入者情報が異なる場合、入力してください。</p>
-                        <label class="input-field" style="text-align: left; background: var(--color-white); cursor: pointer;">
+                        <label class="input-field" style="text-align: left; background: var(--color-white); cursor: pointer; display: flex;">
                             <input class="input-labelCheckbox" type="checkbox"> お届け先情報と購入者情報が異なるので、入力する
                         </label>
                     </div>
