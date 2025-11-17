@@ -418,6 +418,39 @@ openCartButtons.forEach(button => {
 
             // 最初に一度チェックを実行（YubinBangoで自動入力された場合に対応）
             checkAddressCompletion();
+
+            // input-labelWrapper内のinputに対する入力時クラス付与ロジック
+            const inputLabelWrappers = cartOverlay.querySelectorAll('.input-labelWrapper');
+
+            inputLabelWrappers.forEach(wrapper => {
+                const input = wrapper.querySelector('.input-field');
+                const label = wrapper.querySelector('.input-label');
+                
+                // 初期ロード時に値が入っているかチェック
+                if (input && input.value.trim() !== '') {
+                    input.classList.add('input-fieldEnter');
+                    if (label) {
+                        label.classList.add('enter');
+                    }
+                }
+
+                // input イベントを設定
+                if (input) {
+                    input.addEventListener('input', function() {
+                        if (this.value.trim().length > 0) {
+                            this.classList.add('input-fieldEnter');
+                            if (label) {
+                                label.classList.add('enter');
+                            }
+                        } else {
+                            this.classList.remove('input-fieldEnter');
+                            if (label) {
+                                label.classList.remove('enter');
+                            }
+                        }
+                    });
+                }
+            });
         }
 
 
