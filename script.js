@@ -126,7 +126,7 @@ const cartTemplate = (product) => `
                         </div>
                         <div style="display: flex; align-items: center; font-size: 0.9em; margin-bottom: 30px;">
                             <input type="checkbox" id="shop-info" checked style="margin-right: 5px;" />
-                            <label for="shop-info">ショップの情報を受け取る</label>
+                            <label class="input-labelCheckbox" for="shop-info">ショップの情報を受け取る</label>
                         </div>
                     </div>
 
@@ -216,9 +216,9 @@ const cartTemplate = (product) => `
                     <div class="form-section">
                         <h2>購入者情報</h2>
                         <p style="font-size: 0.9em; margin-bottom: 15px;">お届け先情報と購入者情報が異なる場合、入力してください。</p>
-                        <button class="input-field" style="text-align: left; background: var(--color-white); cursor: pointer;">
-                            <input type="checkbox" style="margin-right: 5px;"> お届け先情報と購入者情報が異なるので、入力する
-                        </button>
+                        <label class="input-field" style="text-align: left; background: var(--color-white); cursor: pointer;">
+                            <input class="input-labelCheckbox" type="checkbox"> お届け先情報と購入者情報が異なるので、入力する
+                        </label>
                     </div>
 
                     <div class="form-section">
