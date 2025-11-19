@@ -466,7 +466,7 @@ openCartButtons.forEach(button => {
                 
                 // 初期ロード時に値が入っているかチェック
                 if (input && input.value.trim() !== '') {
-                    input.classList.add('input-fieldEnter');
+                    input.classList.add('Enter');
                     if (label) {
                         label.classList.add('enter');
                     }
@@ -476,12 +476,12 @@ openCartButtons.forEach(button => {
                 if (input) {
                     input.addEventListener('input', function() {
                         if (this.value.trim().length > 0) {
-                            this.classList.add('input-fieldEnter');
+                            this.classList.add('Enter');
                             if (label) {
                                 label.classList.add('enter');
                             }
                         } else {
-                            this.classList.remove('input-fieldEnter');
+                            this.classList.remove('Enter');
                             if (label) {
                                 label.classList.remove('enter');
                             }
