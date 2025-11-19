@@ -376,7 +376,7 @@
     opacity: 1;
 }
 
-.input-fieldEnter {
+.input-field.Enter {
    padding-top: 1.5em;
    padding-bottom: calc(0.35em - 1px);
    transition: all 0.2s ease-out;
